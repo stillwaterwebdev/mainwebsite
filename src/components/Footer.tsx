@@ -1,20 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const SocialIcon = ({ href, svgPath, label }: { href: string; svgPath: string; label: string }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-white hover:text-white/80 transition-colors" 
-    aria-label={label}
-  >
-    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-      <path d={svgPath} />
-    </svg>
-  </a>
-);
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   

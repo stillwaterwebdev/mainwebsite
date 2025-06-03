@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import StarBackground from "../components/StarBackground";
 import SectionSeparator from "@/components/SectionSeparator";
 import ScrollArrow from "@/components/ScrollArrow";
-import Link from "next/link";
 
 // Memoize ServiceCard for performance
 const ServiceCard = memo(({ icon, title, description }: { 
@@ -225,10 +224,10 @@ export default function Home() {
               </p>
               <p className="text-white mb-6 max-w-prose">
                 We work with businesses across Florida and beyond, focusing on clean code, thoughtful design, and solutions that make sense for real people.
-            </p>
+              </p>
 
               <Button href="/contact" isPrimary>Schedule a Call</Button>
-          </div>
+            </div>
 
             {/* Profile Image with Card Overlay */}
             <div className="order-1 md:order-2 w-full h-full relative flex justify-center">
@@ -253,7 +252,7 @@ export default function Home() {
                   <p className="text-royalbyte-300 text-sm">Founder & Lead Developer</p>
                 </div>
               </div>
-          </div>
+            </div>
           </div>
         </section>
 
@@ -265,7 +264,7 @@ export default function Home() {
           <div className="bg-royalbyte-800/20 backdrop-blur-sm border border-royalbyte-800/40 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to elevate your online presence?</h2>
             <p className="text-xl text-white mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can transform your digital strategy and create a website that converts visitors into customers.
+              Let&apos;s discuss how we can transform your digital strategy and create a website that converts visitors into customers.
             </p>
             <div className="inline-block">
               <Button href="/contact" isPrimary>Get Your Free Mockup</Button>

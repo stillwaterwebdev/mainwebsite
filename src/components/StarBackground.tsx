@@ -29,7 +29,7 @@ const StarBackground = memo(function StarBackground() {
       
       // Random position with simple text area avoidance
       let left = Math.random() * 100;
-      let top = Math.random() * 100;
+      const top = Math.random() * 100;
       
       if (left < 45 && top > 30 && top < 70) {
         left = Math.random() < 0.5 ? Math.random() * 30 : 70 + Math.random() * 30;

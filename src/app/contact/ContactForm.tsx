@@ -250,7 +250,7 @@ export default function ContactForm() {
           </button>
           {submitStatus === 'success' && (
             <p className="text-green-500 text-center mt-3">
-              Thank you for your message! We'll get back to you within 24-48 hours.
+              Thank you for your message! We&apos;ll get back to you within 24-48 hours.
             </p>
           )}
           {submitStatus === 'error' && (
@@ -260,7 +260,7 @@ export default function ContactForm() {
           )}
           {submitStatus === 'idle' && !isSubmitting && (
             <p className="text-center text-royalbyte-300 text-sm mt-3">
-              We'll get back to you within 24-48 hours.
+              We&apos;ll get back to you within 24-48 hours.
             </p>
           )}
         </div>

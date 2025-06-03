@@ -51,10 +51,10 @@ export default function ContactPage() {
       <section className="pt-40 pb-16 px-6 hero-gradient">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Let's Work Together
+            Let&apos;s Work Together
           </h1>
           <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto">
-            Have a project in mind? We'd love to hear about it. Get in touch and let's create something exceptional.
+            Have a project in mind? We&apos;d love to hear about it. Get in touch and let&apos;s create something exceptional.
           </p>
         </div>
       </section>

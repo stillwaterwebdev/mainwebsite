@@ -34,14 +34,14 @@ export default function FAQPage() {
             <div className="bg-royalbyte-800/20 backdrop-blur-sm p-6 rounded-xl border border-royalbyte-800/40">
               <h3 className="text-xl font-bold text-white mb-2 min-h-[3.5rem] flex items-center">What information do you need to provide a quote?</h3>
               <p className="text-white">
-                To give you an accurate estimate, we'll need to know your project goals, timeline, desired functionality, and any design preferences. The more details you can provide, the better we can tailor our solution to your needs.
+                To give you an accurate estimate, we&apos;ll need to know your project goals, timeline, desired functionality, and any design preferences. The more details you can provide, the better we can tailor our solution to your needs.
               </p>
             </div>
 
             <div className="bg-royalbyte-800/20 backdrop-blur-sm p-6 rounded-xl border border-royalbyte-800/40">
               <h3 className="text-xl font-bold text-white mb-2 min-h-[3.5rem] flex items-center">How long does a typical project take?</h3>
               <p className="text-white">
-                Our timelines vary based on project complexity. A basic website might take 2-3 weeks, while more complex projects with custom functionality can take 1-2 months. We'll provide a detailed timeline during our initial consultation.
+                Our timelines vary based on project complexity. A basic website might take 2-3 weeks, while more complex projects with custom functionality can take 1-2 months. We&apos;ll provide a detailed timeline during our initial consultation.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ export default function FAQPage() {
             <div className="bg-royalbyte-800/20 backdrop-blur-sm p-6 rounded-xl border border-royalbyte-800/40">
               <h3 className="text-xl font-bold text-white mb-2 min-h-[3.5rem] flex items-center">Is the mockup really free?</h3>
               <p className="text-white">
-                Yes, absolutely! Our custom mockup service is 100% free with no strings attached. We believe in showing you what we can do before you make any financial commitment. This gives you a clear preview of our design approach and helps ensure we're on the same page from the start.
+                Yes, absolutely! Our custom mockup service is 100% free with no strings attached. We believe in showing you what we can do before you make any financial commitment. This gives you a clear preview of our design approach and helps ensure we&apos;re on the same page from the start.
               </p>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function FAQPage() {
           <div className="bg-royalbyte-800/20 backdrop-blur-sm border border-royalbyte-800/40 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
             <p className="text-xl text-white mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can help you achieve your business goals with a custom web solution tailored to your specific needs.
+              Let&apos;s discuss how we can help you achieve your business goals with a custom web solution tailored to your specific needs.
             </p>
             <Link 
               href="/contact" 
