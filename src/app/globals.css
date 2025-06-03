@@ -5,13 +5,19 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 16, 18, 46;
+  --background-start-rgb: 9, 10, 30;
   --background-end-rgb: 16, 18, 46;
+}
+
+html {
+  background: #090a1e;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+  background: #090a1e;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-gradient {
@@ -19,13 +25,10 @@ body {
 }
 
 html, body {
-  @apply bg-royalbyte-900 text-royalbyte-100 font-sans;
+  @apply text-royalbyte-100 font-sans;
   overflow-x: hidden;
   width: 100%;
   position: relative;
-  background-color: #10122E;
-  margin: 0;
-  padding: 0;
 }
 
 /* Stars background - optimized properties */
