@@ -89,7 +89,7 @@ const Navbar = memo(function Navbar() {
             {/* Mobile Menu Button */}
             <button 
               onClick={toggleMobileMenu} 
-              className="md:hidden text-white z-20 p-2 focus:outline-none"
+              className="md:hidden text-white z-30 p-2 focus:outline-none relative"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -110,8 +110,9 @@ const Navbar = memo(function Navbar() {
           ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
           md:hidden
         `}
+        onClick={() => setMobileMenuOpen(false)}
       >
-        <nav className="flex flex-col items-center space-y-8 px-6">
+        <nav className="flex flex-col items-center space-y-8 px-6" onClick={(e) => e.stopPropagation()}>
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
@@ -123,7 +124,7 @@ const Navbar = memo(function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="absolute bottom-10 left-0 w-full text-center text-sm text-royalbyte-300">
+        <div className="absolute bottom-10 left-0 w-full text-center text-sm text-royalbyte-300" onClick={(e) => e.stopPropagation()}>
           <p>© {new Date().getFullYear()} Stillwater Web Development</p>
         </div>
       </div>

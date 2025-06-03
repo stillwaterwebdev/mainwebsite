@@ -102,25 +102,25 @@ export default function Home() {
           <StarBackground />
           <section className="max-w-7xl mx-auto px-8 pt-56 pb-24 relative">
             <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div>
+              <div className="relative z-20">
                 <span className="text-lg tracking-wide text-white font-mono block mb-2">
                   Hand-Coded, Custom Designs
                 </span>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6">
                   Turn clicks into
                   <div className="mt-4 ml-[-20px]">
                     <AnimatedText />
                   </div>
                 </h1>
                 <div className="max-w-[560px]">
-                  <p className="text-xl text-white mb-8">
+                  <p className="text-lg sm:text-xl text-white mb-6 sm:mb-8">
                     No WordPress, no page-builders. We create lightning fast 
                     websites that convert visitors into customers. 
                   </p>
-                  <p className="text-xl text-white mb-8">
+                  <p className="text-lg sm:text-xl text-white mb-6 sm:mb-8">
                     Get your free mockup today, no strings attached.
                   </p>
-                  <div className="flex gap-6 w-[calc(100%-48px)]">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-[calc(100%-48px)]">
                     <div className="flex-1">
                       <Button href="/contact" isPrimary fullWidth>Get Started</Button>
                     </div>
@@ -130,7 +130,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative overflow-visible h-full">
+              <div className="relative overflow-visible h-full hidden md:block">
                 <div 
                   className="absolute" 
                   style={{ 
