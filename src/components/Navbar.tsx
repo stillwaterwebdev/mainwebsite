@@ -93,11 +93,17 @@ const Navbar = memo(function Navbar() {
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
-              <div className="relative w-6 h-5">
-                <span className={`absolute h-0.5 w-6 bg-white transform transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 top-2' : 'rotate-0 top-0'}`}></span>
-                <span className={`absolute h-0.5 w-6 bg-white transform transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'} top-2`}></span>
-                <span className={`absolute h-0.5 w-6 bg-white transform transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 top-2' : 'rotate-0 top-4'}`}></span>
-              </div>
+              {mobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <div className="relative w-6 h-5">
+                  <span className="absolute h-0.5 w-6 bg-white top-0"></span>
+                  <span className="absolute h-0.5 w-6 bg-white top-2"></span>
+                  <span className="absolute h-0.5 w-6 bg-white top-4"></span>
+                </div>
+              )}
             </button>
           </div>
         </div>
@@ -110,9 +116,8 @@ const Navbar = memo(function Navbar() {
           ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
           md:hidden
         `}
-        onClick={() => setMobileMenuOpen(false)}
       >
-        <nav className="flex flex-col items-center space-y-8 px-6" onClick={(e) => e.stopPropagation()}>
+        <nav className="flex flex-col items-center space-y-8 px-6">
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
@@ -124,7 +129,7 @@ const Navbar = memo(function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="absolute bottom-10 left-0 w-full text-center text-sm text-royalbyte-300" onClick={(e) => e.stopPropagation()}>
+        <div className="absolute bottom-10 left-0 w-full text-center text-sm text-royalbyte-300">
           <p>© {new Date().getFullYear()} Stillwater Web Development</p>
         </div>
       </div>

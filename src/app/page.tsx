@@ -34,8 +34,8 @@ const Button = memo(function Button({ href, isPrimary, children, fullWidth = fal
     <a
       href={href}
       className={`${
-        isPrimary ? "bg-royalbyte-600" : "border border-royalbyte-600"
-      } text-white px-8 py-4 rounded-lg transform transition-transform duration-200 hover:scale-105 text-center block ${
+        isPrimary ? "bg-royalbyte-600 hover:bg-royalbyte-700" : "border border-royalbyte-600 hover:border-royalbyte-500"
+      } text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg transform transition-all duration-200 hover:scale-105 text-center block font-medium ${
         fullWidth ? "w-full" : ""
       }`}
     >
@@ -100,27 +100,27 @@ export default function Home() {
         {/* Hero Section */}
         <div className="relative min-h-screen hero-gradient">
           <StarBackground />
-          <section className="max-w-7xl mx-auto px-8 pt-56 pb-24 relative">
+          <section className="max-w-7xl mx-auto px-6 sm:px-8 pt-40 sm:pt-56 pb-16 sm:pb-24 relative">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div className="relative z-20">
-                <span className="text-lg tracking-wide text-white font-mono block mb-2">
+                <span className="text-sm sm:text-lg tracking-wide text-white font-mono block mb-3 sm:mb-2">
                   Hand-Coded, Custom Designs
                 </span>
-                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                   Turn clicks into
-                  <div className="mt-4 ml-[-20px]">
+                  <div className="mt-2 sm:mt-4 ml-[-10px] sm:ml-[-20px]">
                     <AnimatedText />
                   </div>
                 </h1>
                 <div className="max-w-[560px]">
-                  <p className="text-lg sm:text-xl text-white mb-6 sm:mb-8">
+                  <p className="text-base sm:text-lg md:text-xl text-white mb-4 sm:mb-6 md:mb-8 leading-relaxed">
                     No WordPress, no page-builders. We create lightning fast 
                     websites that convert visitors into customers. 
                   </p>
-                  <p className="text-lg sm:text-xl text-white mb-6 sm:mb-8">
+                  <p className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-6 md:mb-8 leading-relaxed">
                     Get your free mockup today, no strings attached.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-[calc(100%-48px)]">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 w-full sm:w-[calc(100%-48px)]">
                     <div className="flex-1">
                       <Button href="/contact" isPrimary fullWidth>Get Started</Button>
                     </div>
