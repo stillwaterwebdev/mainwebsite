@@ -7,38 +7,42 @@ import SectionSeparator from "@/components/SectionSeparator";
 import ScrollArrow from "@/components/ScrollArrow";
 
 // Memoize ServiceCard for performance
-const ServiceCard = memo(({ icon, title, description }: { 
+const ServiceCard = memo(function ServiceCard({ icon, title, description }: { 
   icon: React.ReactNode, 
   title: string, 
   description: string 
-}) => (
-  <div className="bg-royalbyte-900/40 backdrop-blur-sm p-8 rounded-xl border border-royalbyte-800/40 hover:border-royalbyte-600/40 transition-all hover:shadow-lg hover:shadow-royalbyte-600/10">
-    <div className="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-royalbyte-800/30">
-      {icon}
+}) {
+  return (
+    <div className="bg-royalbyte-900/40 backdrop-blur-sm p-8 rounded-xl border border-royalbyte-800/40 hover:border-royalbyte-600/40 transition-all hover:shadow-lg hover:shadow-royalbyte-600/10">
+      <div className="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-royalbyte-800/30">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+      <p className="text-white">{description}</p>
     </div>
-    <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-    <p className="text-white">{description}</p>
-  </div>
-));
+  );
+});
 
 // Button component to reduce duplication
-const Button = memo(({ href, isPrimary, children, fullWidth = false }: { 
+const Button = memo(function Button({ href, isPrimary, children, fullWidth = false }: { 
   href: string, 
   isPrimary?: boolean, 
   children: React.ReactNode,
   fullWidth?: boolean
-}) => (
-  <a
-    href={href}
-    className={`${
-      isPrimary ? "bg-royalbyte-600" : "border border-royalbyte-600"
-    } text-white px-8 py-4 rounded-lg transform transition-transform duration-200 hover:scale-105 text-center block ${
-      fullWidth ? "w-full" : ""
-    }`}
-  >
-    <span>{children}</span>
-  </a>
-));
+}) {
+  return (
+    <a
+      href={href}
+      className={`${
+        isPrimary ? "bg-royalbyte-600" : "border border-royalbyte-600"
+      } text-white px-8 py-4 rounded-lg transform transition-transform duration-200 hover:scale-105 text-center block ${
+        fullWidth ? "w-full" : ""
+      }`}
+    >
+      <span>{children}</span>
+    </a>
+  );
+});
 
 export default function Home() {
   // Easily adjust these values to change image positioning and size
@@ -214,13 +218,13 @@ export default function Home() {
             <div className="order-2 md:order-1">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Us</h2>
               <p className="text-white mb-4 max-w-prose">
-                I'm <span className="text-royalbyte-300 font-bold">Abel</span>, founder and lead developer at Stillwater Web Development. What started as freelance projects while finishing my degree turned into something bigger when I realized how many businesses were stuck with cookie-cutter solutions that didn't fit their needs.
+                I&apos;m <span className="text-royalbyte-300 font-bold">Abel</span>, founder and lead developer at Stillwater Web Development. What started as freelance projects while finishing my degree turned into something bigger when I realized how many businesses were stuck with cookie-cutter solutions that didn&apos;t fit their needs.
               </p>
               <p className="text-white mb-6 max-w-prose">
-                The name Stillwater came from those early morning coding sessions by the lake near my apartment in Orlando. There's something about that calm, focused energy that I try to bring to every project. I believe great web development happens when you take the time to really understand what a business is trying to accomplish, then build something that serves that purpose.
+                The name Stillwater came from those early morning coding sessions by the lake near my apartment in Orlando. There&apos;s something about that calm, focused energy that I try to bring to every project. I believe great web development happens when you take the time to really understand what a business is trying to accomplish, then build something that serves that purpose.
               </p>
               <p className="text-white mb-6 max-w-prose">
-                As both founder and lead developer, I handle everything from initial concept to final deployment, working closely with each client to create websites that perform well and grow with their business. Whether it's a local restaurant needing online ordering or a startup launching their first platform, I'm passionate about turning ideas into digital experiences that work.
+                As both founder and lead developer, I handle everything from initial concept to final deployment, working closely with each client to create websites that perform well and grow with their business. Whether it&apos;s a local restaurant needing online ordering or a startup launching their first platform, I&apos;m passionate about turning ideas into digital experiences that work.
               </p>
               <p className="text-white mb-6 max-w-prose">
                 We work with businesses across Florida and beyond, focusing on clean code, thoughtful design, and solutions that make sense for real people.
